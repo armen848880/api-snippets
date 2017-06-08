@@ -23,7 +23,7 @@ def generate_code_sample_filepath(twiml_filepath, language):
 
     language_spec = load_language_spec(language)
     version = LANGUAGES_VERSIONS[language]
-    return twiml_filepath.parent.parent / (twiml_filepath.name[:-3] + version + language_spec['extension'])
+    return twiml_filepath.parent.parent / (twiml_filepath.name[:-5] + version + language_spec['extension'])
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
